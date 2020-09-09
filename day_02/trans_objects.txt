@@ -1,0 +1,39 @@
+> var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}
+undefined
+> person
+> person['firstName']
+'John'
+> person.values()
+Thrown:
+TypeError: person.values is not a function
+> person.values
+undefined
+> person.keys()
+Thrown:
+TypeError: person.keys is not a function
+> person.keys
+undefined
+> Object.keys(person)
+[ 'firstName', 'lastName', 'age', 'eyeColor' ]
+> Object.values(person)
+[ 'John', 'Doe', 50, 'blue' ]
+> for(key in person) { console.log(key) }
+firstName
+lastName
+age
+eyeColor
+undefined
+> var L = []
+undefined
+> for(key in person) { L.push(key) }
+4
+> L
+[ 'firstName', 'lastName', 'age', 'eyeColor' ]
+> person.lastName = "Doe"
+'Doe'
+> person
+{ firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blue' }
+> person.age = 10
+10
+> person
+{ firstName: 'John', lastName: 'Doe', age: 10, eyeColor: 'blue' }

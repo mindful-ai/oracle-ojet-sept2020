@@ -1,0 +1,98 @@
+C:\Users\Purushotham\Desktop\Research\Mindful Learning\Javascript>node
+Welcome to Node.js v12.14.0.      
+Type ".help" for more information.
+> // STRINGS
+undefined
+> var x = "ram"
+undefined
+> x[0]
+'r'
+> x[1]
+'A'
+'ram'
+> // ------------ immutability
+undefined
+>
+> x[-1]
+undefined
+'ram'
+> x[-1]
+undefined
+> x[-2]
+undefined
+>
+> // ---------------- negative indexing
+undefined
+>
+> x.length
+3
+> x.indexOf('a')
+1
+> x.lastIndexOf('r')
+0
+>
+>
+> x.search('a')
+1
+> var y = "This is a string"
+undefined
+> y.search("is")
+2
+> y.slice(5, 8)
+'is '
+> y.substring(5, 8)
+'is '
+> y.slice(-10, -7)
+'s a'
+> y.slice(-11, -8)
+'is '
+> y.substr(0, 10)
+'This is a '
+> var z = y.substr(0, 10)
+undefined
+> z
+'This is a '
+> typeof(z)
+'string'
+> y
+'This is a string'
+> y.replace("a", "the")
+'This is the string'
+> y
+'This is a string'
+>
+> y.toUpperCase()
+'THIS IS A STRING'
+> y.toLowerCase()
+'this is a string'
+> x.concat(y)
+'ramThis is a string'
+> (x + ':').concat(y)
+'ram:This is a string'
+>
+>
+> z = "  hello  "
+'  hello  '
+> z.trim()
+'hello'
+>
+> z.trim().chatAt(0)
+Thrown:
+TypeError: z.trim(...).chatAt is not a function
+> z.trim().charAt(0)
+'h'
+> z.trim().charCodeAt(0)
+104
+>
+>
+> var ip = "192.168.1.1"
+undefined
+> ip.split('.')
+[ '192', '168', '1', '1' ]
+> ip.split('.')[1]
+'168'
+> var a = [ '192', '168', '1', '1' ]
+undefined
+> a.join("-")
+'192-168-1-1'
+>

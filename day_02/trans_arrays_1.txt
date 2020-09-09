@@ -1,0 +1,110 @@
+> // ARRAYS
+undefined
+>
+> var fruits = ["Banana", "Orange", "Apple", "Mango"];
+undefined
+> fruits
+[ 'Banana', 'Orange', 'Apple', 'Mango' ]
+> typeof(fruits)
+'object'
+> fruits.push('Kiwi')
+5
+> fruits
+[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.pop()
+'Kiwi'
+> fruits
+[ 'Banana', 'Orange', 'Apple', 'Mango' ]
+> fruits.pop()
+'Mango'
+>
+> fruits
+[ 'Banana', 'Orange', 'Apple' ]
+> fruits.shift('Kiwi')
+'Banana'
+> fruits
+[ 'Orange', 'Apple' ]
+> fruits.unshift('Kiwi')
+3
+> fruits
+[ 'Kiwi', 'Orange', 'Apple' ]
+>
+> fruits.splice(0, 1)
+[ 'Kiwi' ]
+> # ---- m, n  => m, m+1, m+2 .... n-1
+Thrown:
+# ---- m, n  => m, m+1, m+2 .... n-1
+^
+
+SyntaxError: Invalid or unexpected token
+> // # ---- m, n  => m, m+1, m+2 .... n-1
+undefined
+> fruits.splice(0, 2)
+[ 'Orange', 'Apple' ]
+> fruits
+[]
+> fruits = [ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.splice(2, 1, "Lemon")
+[ 'Apple' ]
+>
+> fruits.push(2, 'Grapes')
+7
+> fruits
+[
+  'Banana', 'Orange',
+  'Lemon',  'Mango',
+  'Kiwi',   2,
+  'Grapes'
+]
+> fruits = [ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+> fruits
+[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.splice(2, 0, "Lemon")
+[]
+> fruits
+[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.slice(1)
+[ 'Orange', 'Lemon', 'Apple', 'Mango', 'Kiwi' ]
+> fruits
+[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.slice(1, 3)
+[ 'Orange', 'Lemon' ]
+> fruits.slice(1, 4)
+[ 'Orange', 'Lemon', 'Apple' ]
+> fruits.slice(, 4)
+Thrown:
+fruits.slice(, 4)
+             ^
+
+SyntaxError: Unexpected token ','
+> fruits.slice(4)
+[ 'Mango', 'Kiwi' ]
+> fruits.slice(0, 5)
+[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango' ]
+> fruits.slice(0, 4)
+[ 'Banana', 'Orange', 'Lemon', 'Apple' ]
+> fruits
+[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.splice(0, 4)
+[ 'Banana', 'Orange', 'Lemon', 'Apple' ]
+> fruits
+[ 'Mango', 'Kiwi' ]
+> fruits = [ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango', 'Kiwi' ]
+[ 'Banana', 'Orange', 'Lemon', 'Apple', 'Mango', 'Kiwi' ]
+> fruits.sort()
+[ 'Apple', 'Banana', 'Kiwi', 'Lemon', 'Mango', 'Orange' ]
+> fruits.reverse()
+[ 'Orange', 'Mango', 'Lemon', 'Kiwi', 'Banana', 'Apple' ]
+> var points = [40, 100, 1, 5, 25, 10];
+undefined
+> points.sort(function(a, b){return a - b});
+[ 1, 5, 10, 25, 40, 100 ]
+> points.sort(function(a, b){return b - a});
+[ 100, 40, 25, 10, 5, 1 ]
+> points.sort(function(a, b){return b > a});
+[ 100, 40, 25, 10, 5, 1 ]
+> points.sort(function(a, b){return b < a});
+[ 100, 40, 25, 10, 5, 1 ]
+>

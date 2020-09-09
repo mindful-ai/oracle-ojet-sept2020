@@ -1,0 +1,59 @@
+> var a = 10
+undefined
+> var b = 30
+undefined
+> console.log(a + b)
+40
+undefined
+> var a = 10
+undefined
+> var b = 30
+undefined
+> console.log(a + b)
+40
+undefined
+>
+> typeof(a)
+'number'
+> typeof(b)
+'number'
+> var s = "javascript"
+undefined
+> car s1 = new String("javascript")
+Thrown:
+car s1 = new String("javascript")
+    ^^
+
+SyntaxError: Unexpected identifier
+> var s1 = new String("javascript")
+undefined
+> s
+'javascript'
+> s1
+[String: 'javascript']
+> s == s1
+true
+> s === s1
+false
+> typeof(s)
+'string'
+> typeof(s1)
+'object'
+> console.log(a + "red")
+10red
+undefined
+> var x = a + "red"
+undefined
+> typeof(x)
+'string'
+>
+>
+> var y = "red"
+undefined
+> typeof(y) == 'string'
+true
+> var y = 10
+undefined
+> typeof(y) == 'string'
+false
+>

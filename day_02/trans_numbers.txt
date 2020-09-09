@@ -1,0 +1,55 @@
+> // NUMBERS
+undefined
+>
+> var a = 10;
+undefined
+> var b = 20;
+undefined
+> a + b
+30
+> a + "10"
+'1010'
+> (a + b).toString()
+'30'
+> var x = 9.456
+undefined
+> x.toExponential()
+'9.456e+0'
+> typeof(x.toExponential())
+'string'
+> x.toFixed()
+'9'
+> var y = 9.876
+undefined
+> y.toFixed()
+'10'
+>
+> y.valueOf()
+9.876
+> y
+9.876
+> y.valueOf("9.4567")
+9.876
+> Number("9.456")
+9.456
+> parseInt("345.567")
+345
+> parseFloat("345.567")
+345.567
+> parseFloat("This statement has a floating point number 435.56")
+NaN
+> Number.MAX_VALUE
+1.7976931348623157e+308
+> Number.MIN_VALUE
+5e-324
+> var a = NaN
+undefined
+> typeof(a)
+'number'
+> NaN
+NaN
+> Number.POSITIVE_INFINITY
+Infinity
+> Number.NEGATIVE_INFINITY
+-Infinity
+>
