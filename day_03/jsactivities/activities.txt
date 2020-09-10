@@ -37,3 +37,215 @@ Check if the number is divisible by 7 and 11
 Activity #6
 
 Print the first 10 fibonacci numbers
+
+
+
+SOLUTIONS:
+
+> var a = 10;
+undefined
+> var b = 20;
+undefined
+> console.log(a + b)
+30
+undefined
+> // ----------------------------- 1
+undefined
+>
+> var s = "Twikle Twikle little stars"
+undefined
+> var sc = s.replace('Twikle', 'Twinkle')
+undefined
+> sc
+'Twinkle Twikle little stars'
+>
+> # ------------------------------ 2
+Thrown:
+# ------------------------------ 2
+^
+
+SyntaxError: Invalid or unexpected token
+>
+> // ------------------------------ 2
+undefined
+>
+> var fruits = ["Banana", "Orange", "Apple", "Mango"];
+undefined
+> fruits.splice(2, 0, "grapes")
+[]
+> fruits
+[ 'Banana', 'Orange', 'grapes', 'Apple', 'Mango' ]
+> fruits.splice(3, 1)
+[ 'Apple' ]
+> fruits
+[ 'Banana', 'Orange', 'grapes', 'Mango' ]
+> fruits.indexOf('grapes')
+2
+> fruits = [ 'Banana', 'Orange', 'grapes', 'Apple', 'Mango' ]
+[ 'Banana', 'Orange', 'grapes', 'Apple', 'Mango' ]
+> fruits.splice(fruits.indexOf('Apple'), 1)
+[ 'Apple' ]
+> fruits
+[ 'Banana', 'Orange', 'grapes', 'Mango' ]
+> fruits.sort()
+[ 'Banana', 'Mango', 'Orange', 'grapes' ]
+>
+> // -------------------------------------- 3
+undefined
+>
+> var person = { firstName: "John",}
+undefined
+> var person = { firstName: "John",}
+undefined
+> var person = { firstName: "John", lastName: "Doe", age:35, eyeColor: "Blue" }
+undefined
+> person
+{ firstName: 'John', lastName: 'Doe', age: 35, eyeColor: 'Blue' }
+> Object.keys(person)
+[ 'firstName', 'lastName', 'age', 'eyeColor' ]
+> Object.values(person)
+[ 'John', 'Doe', 35, 'Blue' ]
+>
+> console.log('firstName' + ' -----------> ' + person['firstName'])
+firstName -----------> John
+undefined
+> for(key in Object.keys(person)){
+... console.log(key + ' -----------> ' + person[key])
+... };
+0 -----------> undefined
+1 -----------> undefined
+2 -----------> undefined
+3 -----------> undefined
+undefined
+> for(key in Object.keys(person)){
+... ... console.log(key + ' -----------> ' + person[key])
+Thrown:
+... console.log(key + ' -----------> ' + person[key])
+^^^
+
+SyntaxError: Unexpected token '...'
+> for(key in Object.keys(person)){ console.log(key); }
+0
+1
+2
+3
+undefined
+> for(key of Object.keys(person)){ console.log(key); }
+firstName
+lastName
+age
+eyeColor
+undefined
+> for(key in Object.keys(person)){
+... console.log(key + ' -----------> ' + person[key]);
+... };
+0 -----------> undefined
+1 -----------> undefined
+2 -----------> undefined
+3 -----------> undefined
+undefined
+> for(key of Object.keys(person)){ console.log(key); }
+firstName
+lastName
+age
+eyeColor
+undefined
+> for(key of Object.keys(person)){ console.log(key + ' -----------> ' + person[key]); }
+firstName -----------> John
+lastName -----------> Doe
+age -----------> 35
+eyeColor -----------> Blue
+undefined
+>
+> // ------------------------------------------ 4
+undefined
+>
+> var n = 66;
+undefined
+> if(n % 7 == 0 && n % 11 == 0) { console.log("Yes"); } else { console.log("No"); }
+No
+undefined
+> var n = 77;
+undefined
+> if(n % 7 == 0 && n % 11 == 0) { console.log("Yes"); } else { console.log("No"); }
+Yes
+undefined
+>
+> // --------------------------------------- 5
+undefined
+>
+> // Fibonacci: 0 1 1 2 3 5 8 13 21 ....
+undefined
+> var data = []
+undefined
+> var x = 0;
+undefined
+> var y = 1;
+undefined
+> var z = x + y
+undefined
+> for(i = 0; i < 8; i++){
+... z = x + y
+... data.push(z)
+... x = y
+... x = y
+... }
+1
+> data
+[
+  1, 2, 2, 2,
+  2, 2, 2, 2
+]
+> for(i = 0; i < 8; i++){
+...
+...
+... };
+undefined
+>
+>
+> var x = 0;
+undefined
+> var y = 1;
+undefined
+> for(i = 0; i < 8; i++) {
+... z = x + y;
+... data.push(z);
+... x = y;
+... y = z;
+... };
+34
+> data
+[
+  1,  2,  2,  2, 2, 2,
+  2,  2,  1,  2, 3, 5,
+  8, 13, 21, 34
+]
+> data.splice(0, 7)
+[
+  1, 2, 2, 2,
+  2, 2, 2
+]
+> data
+[
+  2,  1,  2,  3, 5,
+  8, 13, 21, 34
+]
+> data.shift()
+2
+> data
+[
+  1,  2,  3,  5,
+  8, 13, 21, 34
+]
+> data.unshift(1)
+9
+> data.unshift(0)
+10
+> data
+[
+  0, 1,  1,  2,  3,
+  5, 8, 13, 21, 34
+]
+> // -------------------------------------------------- 6
+
+
