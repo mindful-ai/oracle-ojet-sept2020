@@ -1,0 +1,30 @@
+// --------------------------------------------------------------------
+// Lab support for calculator project
+// -------------------------------------------------------------------- 
+     var opa = document.getElementById("ina")
+      var opb = document.getElementById("inb")
+      var res = document.getElementById("result")
+
+      document.getElementById("submit").onclick = function(){
+        /*alert(Number(opa.value) + Number(opb.value))*/
+        var element = document.getElementsByName("op")
+        var op;
+        var value;
+
+        for(i = 0; i < element.length; i++){
+            if(element[i].checked){
+              op = element[i].value
+            }
+         }
+
+         //alert(op)
+
+         switch(op){
+           case "add": {value = Number(opa.value) + Number(opb.value); break;}
+           case "sub": {value = Number(opa.value) - Number(opb.value); break;}
+           case "mul": {value = Number(opa.value) * Number(opb.value); break;}
+           case "div": {value = Number(opa.value) / Number(opb.value); break;}
+         }
+
+         res.innerHTML = value
+      }
