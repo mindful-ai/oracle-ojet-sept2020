@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body onload="startTime()">
+
+        <div id="txt">
+        
+        </div>
+
+        <script> 
+            
+            document.getElementById("txt").style.color = "red";
+            document.getElementById("txt").style.fontSize = "200px";
+            document.getElementById("txt").style.backgroundColor = "lightgreen";
+            document.getElementById("txt").style.textAlign = "center";
+            function startTime(){
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+
+               
+                document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+                
+                var t = setTimeout( function(){startTime();}, 500 );
+                
+            }
+        
+        </script>
+
+    </body>
+</html>
