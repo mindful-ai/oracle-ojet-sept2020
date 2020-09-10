@@ -28,3 +28,17 @@
 
          res.innerHTML = value
       }
+
+// --------------------------------------------------------------------
+// Hints for Prime Number lab exercise
+// -------------------------------------------------------------------- 
+
+// Create a node
+            var para = document.createElement("p");
+            var textnode = document.createTextNode(n + ' X ' + i + ' = ' + n * i);
+            para.appendChild(textnode);
+            para.setAttribute("id", toString("node_"+ n + i)); //node_55
+
+            // Add to the parent 
+            var parent = document.getElementById("table");
+            parent.appendChild(para);
