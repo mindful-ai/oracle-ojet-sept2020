@@ -29,9 +29,29 @@
          res.innerHTML = value
       }
 
-// --------------------------------------------------------------------
-// Hints for Prime Number lab exercise
-// -------------------------------------------------------------------- 
+function AppViewModel() {
+
+            this.firstName = ko.observable("Ram");
+            this.lastName = ko.observable("Suryavanshi");
+            this.c = "red";
+
+            // KO Computed Property
+            this.fullName = ko.computed(function() {
+                return this.firstName() + " " + this.lastName();    
+            }, this);
+
+            // More behavior
+            // Notice that, to read or write an observable's value, you call it as a function.
+            this.capitalizeLastName = function() {
+                var currentVal = this.lastName();        // Read the current value
+                this.lastName(currentVal.toUpperCase()); // Write back a modified value
+            };
+
+            
+        }
+
+        // Activates knockout.js
+        ko.applyBindings(new AppViewModel());
 
 document.getElementById("num").addEventListener("input", tablegen);
 
@@ -44,3 +64,44 @@ document.getElementById("num").addEventListener("input", tablegen);
             // Add to the parent 
             var parent = document.getElementById("table");
             parent.appendChild(para);
+
+
+// -----------------------------------------------------------------------------------------------
+// Knockout Lab
+// ----------------------------------------------------------------------------------------------
+
+
+    <p>First name: <input data-bind="value: firstName" /></p>
+    <p>Last name: <input data-bind="value: lastName" /></p>
+
+    <p>Full name: <strong data-bind="text: fullName"></strong></p>
+
+    <button data-bind="click: capitalizeLastName">Go caps</button>
+    
+    
+    
+    
+            function AppViewModel() {
+
+            this.firstName = ko.observable("Ram");
+            this.lastName = ko.observable("Suryavanshi");
+            this.c = "red";
+
+            // KO Computed Property
+            this.fullName = ko.computed(function() {
+                return this.firstName() + " " + this.lastName();    
+            }, this);
+
+            // More behavior
+            // Notice that, to read or write an observable's value, you call it as a function.
+            this.capitalizeLastName = function() {
+                var currentVal = this.lastName();        // Read the current value
+                this.lastName(currentVal.toUpperCase()); // Write back a modified value
+            };
+
+            
+        }
+
+        // Activates knockout.js
+        ko.applyBindings(new AppViewModel());
+   
