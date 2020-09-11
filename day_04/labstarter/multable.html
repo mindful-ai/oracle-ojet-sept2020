@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <p>
+      <label>Multiplication Table Generator</label><br>
+      <label for="num">Enter Number </label>
+
+      <input id="num" type="number" placeholder="1">
+    </p>
+    
+    <hr>
+    
+    <div class="table" id="table">
+    </div>
+
+    <script>
+        document.getElementById("num").addEventListener("input", tablegen);
+
+        function tablegen(){
+          
+          var n = parseInt(document.getElementById("num").value);
+          
+          cleartable();
+
+          for(i = 1;i <= 10; i++){
+            // Create a node
+            var para = document.createElement("p");
+            var textnode = document.createTextNode(n + ' X ' + i + ' = ' + n * i);
+            para.appendChild(textnode);
+            para.setAttribute("id", toString("node_"+ n + i)); //node_55
+
+            // Add to the parent 
+            var parent = document.getElementById("table");
+            parent.appendChild(para);
+
+          }
+        };
+
+        function cleartable() {
+            var parent = document.getElementById("table");
+            while(parent.firstChild) {
+              parent.removeChild(parent.lastChild);
+            };
+        };
+
+    </script>
+
+  </body>
+</html>
+
+<!-- Other approach could be to create child elements
+and update the inner HTML everytime a new value is
+entered -->
