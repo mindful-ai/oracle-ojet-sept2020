@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+
+</head>
+
+<body>
+    <center >
+        A = <input type="number" data-bind="value : num_a" />
+        <br>
+        B = <input type="number" data-bind="value : num_b" />
+
+        <hr>
+        ViewModel values<br>
+        <p>
+            A is <strong data-bind="text: num_a"></strong>
+        </p>
+        <p>
+            B is <strong data-bind="text: num_b"></strong>
+        </p>
+        <hr>
+        <h3>
+            the sum of square of 2 numbers is
+            <strong data-bind="text: num_a"></strong><sup>2</sup>
+            +
+            <strong data-bind="text: num_b"></strong><sup>2</sup>
+            :
+        </h3>
+        <h1 data-bind="text : result"></h1>
+
+    </center>
+
+    <script>
+        function ViewModel() {
+            this.num_a = ko.observable(0);
+            this.num_b = ko.observable(0);
+
+            this.result = ko.computed(function () {
+                return this.num_a()^ 2 + this.num_b()^ 2;
+            }, this);
+        }
+
+
+
+        ko.applyBindings(new ViewModel());
+    </script>
+
+</body>
+
+
+
+</html>

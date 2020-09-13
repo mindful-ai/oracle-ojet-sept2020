@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Temperature Converter</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+
+<body>
+  <p>
+    <label>Multiplication Table Generator</label><br>
+    <label for="num">Enter Number </label>
+
+    <input id="num" type="number" placeholder="1">
+  </p>
+
+  <hr>
+
+  <div class="table" id="table">
+  </div>
+
+  <script>
+    $("#num").on('change paste keyup', function () {
+      $("#table").empty();
+      for (var i = 0; i < 10; i++)
+        $("#table").append($("<p id= node_" + $(this).val() + "_" + i + "></p>").text($(this).val() + " x " + i + " = " + $(this).val() * i));
+    });  </script>
+
+</body>
+
+</html>
+
+<!-- Other approach could be to create child elements
+and update the inner HTML everytime a new value is
+entered -->
